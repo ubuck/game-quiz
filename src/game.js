@@ -151,7 +151,7 @@ function loadQuestion() {
 // ⏱️ TIMER
 function startTimer(){
   clearInterval(timer);          // kill any old interval
-  timeLeft = 10;
+  timeLeft = 90;
   tick();                        // show first number immediately
 
   timer = setInterval(()=>{

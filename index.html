@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio id="wrongSound" src="wrong.mp3"></audio>
+
+
+
     <div id="app">
         <!-- LOADING SCREEN -->
         <div id="loader" class="loader">
@@ -60,5 +64,24 @@
      <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="config.js"></script>
     <script src="script.js" defer></script>
+
+
+
+    <script>
+const wrongButtons = document.querySelectorAll(".answers button.wrong");
+const sound = document.getElementById("wrongSound");
+
+wrongButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        sound.currentTime = 0;
+        sound.play();
+    });
+});
+</script>
+
+
+
+
+
 </body>
 </html>
